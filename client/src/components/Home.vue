@@ -1,6 +1,6 @@
 <template>
   <div class="home container">
-    <h1>The Shmerlings</h1>
+    <h1>The Komi Home Page</h1>
     
     <button @click="getAll()">getAll!!!</button>
 
