@@ -33,6 +33,7 @@ var server = http.createServer(app);
  */
 
 server.listen(port);
+console.log(' =========== KOMI SERVER IS ON AIR! =========== ');
 console.log('app listen on port: ', currPort);
 
 server.on('error', onError);
