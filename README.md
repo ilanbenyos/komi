@@ -38,16 +38,17 @@ seed app for students projects. contains:
 
 
 ## 7. download and install project:
- 1. at console, write : `git clone https://github.com/ilanbenyos/komi.git`
- 2. type: `npm run install:all`.
- 3. at right side of terminal press Split terminal button (between + and delete)
- 4. on the left side type: `npm run server:start`. should be “app listen on port:  3000”
- 5. on the right side type: `npm run client:start`. should be <http://localhost:8080/>
- 6. ctrl + click on <http://localhost:8080/> (or copy-paste into chrome url)
- 7. site should open with “ברוכים הבאים לאתר יזמות אמית 2020”
- 8. in chrome, press `f12` ( or `fn + f12`) to open chrome devtool.
- 9. in devtool. make sure you have Vue tab at top-right side.
- 10. at page, press send!!! button. you should have “Hi From Server!” note.
+ 1. at console, write : `git clone https://github.com/ilanbenyos/komi.git`.
+ 2. cd komi
+ 3. type: `npm run install:all`.
+ 4. at right side of terminal press Split terminal button (between + and delete)
+ 5. on the left side type: `npm run server:start`. should be “app listen on port:  3000”
+ 6. on the right side type: `npm run client:start`. should be <http://localhost:8080/>
+ 7. ctrl + click on <http://localhost:8080/> (or copy-paste into chrome url)
+ 8. site should open with “ברוכים הבאים לאתר יזמות אמית 2020”
+ 9. in chrome, press `f12` ( or `fn + f12`) to open chrome devtool.
+ 10. in devtool. make sure you have Vue tab at top-right side.
+ 11. at page, press send!!! button. you should have “Hi From Server!” note.
 
 ## wait nutil after first zoom session...
 
