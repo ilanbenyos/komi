@@ -1,8 +1,8 @@
 <template>
   <div class="home container">
-    <h1>The Komi Home Page</h1>
+    <h1>שירה עובדיה המלכה!!!</h1>
     
-    <button @click="getAll()">getAll!!!</button>
+    <button @click="getAll()">קרן ברגר- תביאי לי בבקשה את כל המספרים</button>
 
     <div class="alert alert-primary" role="alert">
         {{msg}}
