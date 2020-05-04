@@ -1,7 +1,7 @@
 <template>
   <div class="home container">
     <h1>שירה עובדיה המלכה!!!</h1>
-    
+  
     <button @click="getAll()">קרן ברגר- תביאי לי בבקשה את כל המספרים</button>
 
     <div class="alert alert-primary" role="alert">

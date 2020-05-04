@@ -4,6 +4,7 @@ import HomePage from "./components/Home";
 import CreateUser from "./components/CreateUser";
 import CreateEvent from "./components/CreateEvent";
 import CreateReport from "./components/CreateReport";
+import Yaara from "./components/Yaara";
 import Page404 from "./components/page404";
 
 
@@ -20,9 +21,14 @@ const router = new Router({
         component: HomePage
     },
     {
-        path: "/createReport",
-        name: "createReport",
-        component: CreateReport
+        path: "/הדף_של_יערה",
+        name: "yaara",
+        component: Yaara
+    },
+    {
+      path: "/createReport",
+      name: "createReport",
+      component: CreateReport
     },
     {
       path: "/createUser",
