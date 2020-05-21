@@ -30,5 +30,6 @@ export default {
 
 #app {
   text-align: right;
+  direction: rtl;
 }
 </style>
