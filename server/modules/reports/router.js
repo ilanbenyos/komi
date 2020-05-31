@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 import * as controller from './controller'
 
-router.get('/:id', async (req, res, next) =>{
-  let id = req.params.id
-  res.send('your Id is:' + id);
-});
 
+router.get('/getAllReports', async (req, res, next) =>{
+  let reports = await controller.getAllReports()
+  res.send(reports);
+})
 
 
 router.delete('/:id', async (req, res, next)=> {
@@ -20,6 +20,12 @@ router.get('/:id', async (req, res, next)=> {
   let report = await controller.getReportById(id)
   res.send(report);
 });
+
+router.get('/', async (req, res, next)=> {
+  let report = await controller.getAllReports()
+  res.send(report);
+});
+
 router.post('/', async(req, res, next)=>{
   const report = req.body;
   console.log('report',report)

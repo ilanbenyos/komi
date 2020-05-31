@@ -16,6 +16,11 @@
         </div>
     </div>
     <br>
+          <button type="button" class="btn btn-primary" @click="getAllReports()">קבל את כל הדוחות</button>
+           <ul class="list-group">
+              <li v-for="(item, idx) in reports" class="list-group-item d-flex justify-content-between" :key="idx">{{item}}
+              </li>
+           </ul>
 
   </div>
 </template>
@@ -29,9 +34,21 @@ export default {
     return{
       plateNumber:null,
       msg:'',
+      reports:null,
     }
   },
   methods:{
+    async getAllReports(){
+      this.$loader(true);
+      try{
+        let res = await axios.get('/reports/getAllReports');
+        this.reports = res;
+        console.log('getAll:res',this.reports);
+
+      }finally{
+        this.$loader(false)
+      }
+    },
     async getAll(){
       this.$loader(true);
       try{
