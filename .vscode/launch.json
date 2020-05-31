@@ -12,24 +12,6 @@
 			"program": "${workspaceFolder}\\server\\bin\\server",
 			"cwd": "${workspaceFolder}/server",
 			"skipFiles": ["<node_internals>/**/*.js"]
-		},
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\server\\routes\\users.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "startup",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/server/app.js"
-        }
+		}
     ]
 }
