@@ -21,14 +21,14 @@ export async function getAll() {
 
 export async function is_valid(plateNumber) {
   try {
-
+    
     const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e&q=${plateNumber}`;
     let res = await axios.get(url);
     let records= res.data.result.records;
-    const bool = (records.length > 0)
+    const boolean = (records.length > 0)
     console.log('is_valid car number:',plateNumber,bool);
 
-    return bool
+    return boolean
 
   } catch (error) {
     console.error('is_valid', error);

@@ -8,6 +8,7 @@ var logger = require('morgan');
 
 var platesRouter = require('./modules/plates/router');
 var reportsRouter = require('./modules/reports/router');
+import friendsRouter from './modules/friends/router';
 
 var app = express();
 
@@ -27,8 +28,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+// ===============ROUTERS!!!=================
 app.use('/plates', platesRouter);
 app.use('/reports', reportsRouter);
+app.use('/friends', friendsRouter);
+
+
+
+
+
 controller.getAll();
 // catch 404 and forward to error handler9
 app.use(function(req, res, next) {

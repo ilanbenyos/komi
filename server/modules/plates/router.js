@@ -3,6 +3,7 @@ const router = express.Router();
 import * as controller from './controller';
 
 
+
 router.get('/getAll', async (req, res, next)=> {
   let res1 = await controller.getAll()
   res.send(res1);

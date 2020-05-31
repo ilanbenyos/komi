@@ -9,6 +9,7 @@
         <div class="ml-3">{{item.fName}}</div>
         <div class="ml-3">{{item.lName}}</div>
         <div class="ml-3">{{item.phone}}</div>
+        <div class="ml-3">{{item.email}}</div>
       </div>
       <img :src="item.image" class="image_avatar rounded-circle ">
 
@@ -29,6 +30,10 @@
 
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="טלפון"  v-model="newFriend.phone">
+  </div>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="אי מייל"  v-model="newFriend.email">
   </div>
 
   <div class="input-group mb-3">
@@ -68,21 +73,21 @@ export default {
         phone:'050-6667778'
       },
       friends:[
-        {
-        fName:'קרן',
-        lName:'בן שמחון',
-        phone:'050-6667778',
-
-        image:' https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKR-4VR8OyFA0d-hanGVxqSznvP5vJj451Tk29ne0RuK64rK2f&usqp=CAU'
-      }
+      //   {
+      //   fName:'קרן',
+      //   lName:'בן שמחון',
+      //   phone:'050-6667778',
+      //   email:'',
+      //   image:' https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKR-4VR8OyFA0d-hanGVxqSznvP5vJj451Tk29ne0RuK64rK2f&usqp=CAU'
+      // }
         // 'שירה11','אורה','קרן','אריאל','עינב','יערה'
       ]
     }
   },
   methods:{
-    add(){
-      this.friends.push(this.newFriend);
-      this.newFriend={}
+    async add(){
+      let res = await axios.post('/friends', this.newFriend)
+      this.friends.push(res);
     },
     remove(idx){
      this.friends.splice(idx,1);

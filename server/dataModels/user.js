@@ -5,7 +5,8 @@ const User = new mongoose.Schema({
   lName: { type: String },//"popo"
   gender: { type: String },//"male"/ "female"/"other"
   email: { type: String },//"yoyo"/"popo"/"momo"
-  age: { type: Number },//4/54/800
+  image: { type: String },
+  phone: { type: String },//4/54/800
 });
 
 

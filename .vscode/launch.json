@@ -8,7 +8,7 @@
         {
 			"type": "node",
 			"request": "launch",
-			"name": "server",
+			"name": "yaara server",
 			"program": "${workspaceFolder}\\server\\bin\\server",
 			"cwd": "${workspaceFolder}/server",
 			"skipFiles": ["<node_internals>/**/*.js"]
