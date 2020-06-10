@@ -25,3 +25,25 @@ export async function saveFriend(friendData) {
     ctx.status = 500
   }
 }
+
+export async function getAllFriends() {
+  try {
+    const friends = await User.find({});
+    return friends
+  } catch (error) {
+    console.error('getAllFriends', error);
+    ctx.body = error;
+    ctx.status = 500
+  }
+}
+
+export async function deleteFriendById(id) {
+  try {
+    const friend = await User.findByIdAndRemove(id);
+    return friend
+  } catch (error) {
+    console.error('deleteFriendById', error);
+    ctx.body = error;
+    ctx.status = 500
+  }
+}

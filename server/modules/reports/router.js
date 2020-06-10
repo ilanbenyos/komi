@@ -21,11 +21,6 @@ router.get('/:id', async (req, res, next)=> {
   res.send(report);
 });
 
-router.get('/', async (req, res, next)=> {
-  let report = await controller.getAllReports()
-  res.send(report);
-});
-
 router.post('/', async(req, res, next)=>{
   const report = req.body;
   console.log('report',report)
