@@ -1,6 +1,7 @@
 <template>
   <div class="yaara container" style="height:50vh">
   <h3>החברות של יערה</h3>
+  <h5>יערה הייתה כאן</h5>
   <ul class="list-group">
     <li v-for="(item, idx) in friends" class="list-group-item d-flex justify-content-between" :key="idx">
       <div @click="remove(idx)" class="c-pointer x-close"> X</div>
