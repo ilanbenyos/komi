@@ -1,6 +1,22 @@
 import axios from 'axios'
 import User from '../../dataModels/user';
 
+export async function getAll() {
+  try {
+    const users = await User.find({});
+    return users
+  } catch (error) {
+    console.error('getAllUsers', error);
+    ctx.body = error;
+    ctx.status = 500
+  }
+}
+
+
+
+
+
+
 export async function saveFriend(friendData) {
   const options = { upsert: true, new: true, setDefaultsOnInsert: true };
     // friendData = parsefriendFromAppInventor(friendData)

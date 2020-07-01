@@ -10,7 +10,10 @@ router.post('/', async (req, res, next)=> {
   res.send(newFriend);
 });
 
-
+router.get('/getAll', async (req, res, next)=> {
+  let friends = await controller.getAll()
+  res.send(friends);
+});
 
 
 

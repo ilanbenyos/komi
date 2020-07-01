@@ -45,6 +45,7 @@
 
 <footer class="mt-5">
     <button @click="add" class="btn btn-info mx-5">הוסף</button>
+    <button @click="getAll" class="btn btn-info mx-5">קבל כל החברים</button>
     <button @click="remove" class="btn btn-info">remove!!</button>
 </footer>
 
@@ -88,6 +89,10 @@ export default {
     async add(){
       let res = await axios.post('/friends', this.newFriend)
       this.friends.push(res);
+    },
+    async getAll(){
+      let res = await axios.get('/friends/getAll')
+      this.friends = res;
     },
     remove(idx){
      this.friends.splice(idx,1);
